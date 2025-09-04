@@ -133,28 +133,29 @@ function okta_init()
         array('user_id' => $user_id)
       );
     }
-    else
-    {
-      //We need to check the user status and make sure it hasn't changed
-      $query = '
-SELECT
-    status
-  FROM '.USER_INFOS_TABLE.'
-  WHERE user_id = '.$user_id.'
-;';
-      list($existing_status) = pwg_db_fetch_row(pwg_query($query));
+//     else
+//     {
+//       //We need to check the user status and make sure it hasn't changed
+//       $query = '
+// SELECT
+//     status
+//   FROM '.USER_INFOS_TABLE.'
+//   WHERE user_id = '.$user_id.'
+// ;';
+//       list($existing_status) = pwg_db_fetch_row(pwg_query($query));
 
-      if($existing_status != $user_status)
-      {
-        single_update(
-          USER_INFOS_TABLE,
-          array(
-            'status' => $user_status,
-            ),
-          array('user_id' => $user_id)
-        );
-      }
-    }
+//       //Make sure we don't change the role if the user is a 
+//       if('webmaster' != $existing_status and $existing_status != $user_status)
+//       {
+//         single_update(
+//           USER_INFOS_TABLE,
+//           array(
+//             'status' => $user_status,
+//             ),
+//           array('user_id' => $user_id)
+//         );
+//       }
+//     }
 
     log_user($user_id, false);
 
