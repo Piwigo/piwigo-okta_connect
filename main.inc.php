@@ -5,7 +5,7 @@
   Description:Connect to Piwigo using Okta SAML
   Plugin URI:
   Author: HWFord
-  Author URI: https://github.com/HWFord
+  Author URI: piwigo.com
   Has Settings: true
 */
 
