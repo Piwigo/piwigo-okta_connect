@@ -26,11 +26,8 @@ if (!empty($_POST) and isset($_POST['save_okta_connect']))
 
   conf_update_param('okta_connect', serialize($config));
     
-  $template->assign(
-    array(
-      'save_success' =>l10n('Information data registered in database'),
-    )
-  );
+  $page['infos'][] = l10n('Information data registered in database');
+
 }
 
 $okta_connect = safe_unserialize($conf['okta_connect']);
