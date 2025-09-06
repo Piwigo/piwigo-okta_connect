@@ -1,0 +1,1 @@
+Conéctese a Piwigo mediante SAML de Okta
