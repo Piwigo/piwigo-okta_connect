@@ -1,0 +1,1 @@
+Konektor Piwigo přes Okta SAML
