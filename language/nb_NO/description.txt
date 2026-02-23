@@ -1,0 +1,1 @@
+Koble til Piwigo ved hjelp av Okta SAML
