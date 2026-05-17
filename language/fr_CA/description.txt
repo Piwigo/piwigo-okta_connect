@@ -1,0 +1,1 @@
+Pour se connecter à Piwigo en utilisant le protocole SAML d'Okta
