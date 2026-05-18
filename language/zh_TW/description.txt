@@ -1,0 +1,1 @@
+使用 Okta SAML 與 Piwigo 建立連線
